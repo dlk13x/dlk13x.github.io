@@ -1,0 +1,22 @@
+#holder {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: relative;
+}
+#square1 {
+  width: 200px;
+  height: 200px;
+  background-color: lime;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+#square2 {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
