@@ -11,3 +11,7 @@ a:hover {
   background-color: black;
   color: aqua;
 }
+img {
+  width: 300px;
+  height: auto;
+}

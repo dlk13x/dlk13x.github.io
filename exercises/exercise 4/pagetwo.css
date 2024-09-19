@@ -14,3 +14,7 @@ a:hover {
 .Strategies > li {
   color: chocolate;
 }
+img {
+  width: 300px;
+  height: auto;
+}
