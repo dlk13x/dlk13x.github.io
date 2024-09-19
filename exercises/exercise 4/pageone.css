@@ -1,0 +1,22 @@
+.Benefits > li {
+  color: blue;
+}
+.Concepts > li {
+  color: red;
+}
+a:link {
+  color: black;
+}
+a:visited {
+  color: brown;
+}
+a:hover {
+  background-color: black;
+  color: aqua;
+}
+.Gameplay > li {
+  color: blueviolet;
+}
+.Strategies > li {
+  color: chocolate;
+}

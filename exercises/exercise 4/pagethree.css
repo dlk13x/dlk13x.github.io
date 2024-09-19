@@ -1,0 +1,13 @@
+.Variants > li {
+  color: dodgerblue;
+}
+a:link {
+  color: black;
+}
+a:visited {
+  color: brown;
+}
+a:hover {
+  background-color: black;
+  color: aqua;
+}
