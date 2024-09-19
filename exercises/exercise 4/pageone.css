@@ -1,7 +1,7 @@
-.Benefits > li {
+.Benefits > ol > li {
   color: blue;
 }
-.Concepts > li {
+.Concepts > ol > li {
   color: red;
 }
 a:link {
@@ -14,12 +14,7 @@ a:hover {
   background-color: black;
   color: aqua;
 }
-.Gameplay > li {
-  color: blueviolet;
-}
-.Strategies > li {
-  color: chocolate;
-}
+
 img {
   width: 300px;
   height: auto;

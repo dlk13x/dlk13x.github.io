@@ -8,10 +8,10 @@ a:hover {
   background-color: black;
   color: aqua;
 }
-.Gameplay > li {
+.Gameplay > ol > li {
   color: blueviolet;
 }
-.Strategies > li {
+.Strategies > ol > li {
   color: chocolate;
 }
 img {
