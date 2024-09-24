@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "dm-sans";
+  src: url(fonts/dm-sans/webfonts/dm-sans-latin-900-normal.woff);
+  font-weight: 900; /*Black*/
+  font-style: normal;
+}
+@font-face {
+  font-family: "dm-sans";
+  src: url(fonts/dm-sans/webfonts/dm-sans-latin-500-italic.woff);
+  font-weight: 500; /*Medium Italic*/
+  font-style: normal;
+}
+@font-face {
+  font-family: "dm-sans";
+  src: url(fonts/dm-sans/webfonts/dm-sans-latin-800-italic.woff);
+  font-weight: 800; /*Extra bold Italic*/
+  font-style: normal;
+}
+@font-face {
+  font-family: "dm-sans";
+  src: url(fonts/dm-sans/webfonts/dm-sans-latin-700-italic.woff);
+  font-weight: 700; /* Bold Italic*/
+  font-style: normal;
+}
+.header {
+  font-family: "dm-sans", sans-serif;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 1.2;
+  padding-top: 100px;
+  color: white;
+}
+.adventure {
+  font-family: "dm-sans", sans-serif;
+  font-weight: 500;
+  font-size: 38px;
+  color: white;
+}
+.extra-bold {
+  font-family: "dm-sans", sans-serif;
+  font-weight: 800;
+  font-size: 38px;
+}
+.bold-italic {
+  font-family: "dm-sans", sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+}
+h1 {
+  font-family: "bebas-neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 96px;
+  line-height: 1.025;
+  text-align: right;
+}
