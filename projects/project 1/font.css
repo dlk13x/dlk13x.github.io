@@ -90,26 +90,25 @@ h1 {
   font-style: normal;
   font-size: 32px;
 }
-.links-to-website {
-  font-family: "ff-real-text-pro", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 40px;
-}
+.links-to-website,
 .links-to-website-reversed {
   font-family: "ff-real-text-pro", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 40px;
 }
-.contact-info {
+.contact-info,
+.social-media,
+.download {
   margin-top: 56px;
   font-family: "dm-sans", sans-serif;
   font-weight: 700;
   font-size: 24px;
   font-style: normal;
 }
-.social-media {
+.copyright-info,
+.active-years,
+.company-name {
   margin-top: 42px;
   font-family: "dm-sans", sans-serif;
   font-weight: 700;
