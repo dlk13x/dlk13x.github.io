@@ -8,19 +8,19 @@
   font-family: "dm-sans";
   src: url(fonts/dm-sans/webfonts/dm-sans-latin-500-italic.woff);
   font-weight: 500; /*Medium Italic*/
-  font-style: normal;
+  font-style: italic;
 }
 @font-face {
   font-family: "dm-sans";
   src: url(fonts/dm-sans/webfonts/dm-sans-latin-800-italic.woff);
   font-weight: 800; /*Extra bold Italic*/
-  font-style: normal;
+  font-style: italic;
 }
 @font-face {
   font-family: "dm-sans";
   src: url(fonts/dm-sans/webfonts/dm-sans-latin-700-italic.woff);
   font-weight: 700; /* Bold Italic*/
-  font-style: normal;
+  font-style: italic;
 }
 @font-face {
   font-family: "dm-sans";
@@ -31,13 +31,13 @@
 @font-face {
   font-family: "dm-sans";
   src: url(fonts/dm-sans/webfonts/dm-sans-latin-600-normal.woff);
-  font-weight: 600;
+  font-weight: 600; /* Semi bold */
   font-style: normal;
 }
 @font-face {
   font-family: "dm-san";
   src: url(fonts/dm-sans/webfonts/dm-sans-latin-700-normal.woff);
-  font-weight: 700;
+  font-weight: 700; /* Bold */
   font-style: normal;
 }
 .dive-into {
@@ -47,11 +47,12 @@
   line-height: 1.2;
   color: white;
 }
-.adventure {
+.are-you-ready {
   font-family: "dm-sans", sans-serif;
   font-weight: 500;
   font-size: 38px;
   color: white;
+  font-style: italic;
 }
 .extra-bold {
   font-family: "dm-sans", sans-serif;
@@ -62,6 +63,7 @@
   font-family: "dm-sans", sans-serif;
   font-weight: 700;
   font-size: 38px;
+  font-style: italic;
 }
 h1 {
   font-family: "bebas-neue", sans-serif;
@@ -72,7 +74,7 @@ h1 {
   text-align: right;
   color: #9dad20;
 }
-.smaller-text {
+.smaller-header-text {
   font-size: 64px;
   line-height: 1.025;
 }
@@ -82,7 +84,7 @@ h1 {
   font-style: normal;
   font-size: 50px;
 }
-.description-hersheypark {
+.attraction-descriptions {
   font-family: "dm-sans", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -93,4 +95,24 @@ h1 {
   font-weight: 500;
   font-style: normal;
   font-size: 40px;
+}
+.links-to-website-reversed {
+  font-family: "ff-real-text-pro", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 40px;
+}
+.contact-info {
+  margin-top: 56px;
+  font-family: "dm-sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  font-style: normal;
+}
+.social-media {
+  margin-top: 42px;
+  font-family: "dm-sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  font-style: normal;
 }

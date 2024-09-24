@@ -3,20 +3,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-#placehold {
-  width: 1440px;
-  height: 569px;
-  background-image: url(images/kid-and-girl-1.png);
-  background-size: cover;
-}
-#placehold > div {
-  top: -45px;
-  right: 30px;
-  height: 221px;
-  width: 663px;
-  position: absolute;
-  text-transform: uppercase;
-}
 .row {
   margin: 20px;
   position: relative;
@@ -24,16 +10,21 @@ body {
   width: 1440px;
   height: 135px;
 }
-
-.row-columns {
-  margin: 20px;
-  position: relative;
-  margin: 0 auto;
+#front-cover {
   width: 1440px;
-  height: 135px;
-  top: 135px;
+  height: 569px;
+  background-image: url(images/kid-and-girl-1.png);
+  background-size: cover;
 }
-#message {
+#front-cover > div {
+  top: -45px;
+  right: 30px;
+  height: 221px;
+  width: 663px;
+  position: absolute;
+  text-transform: uppercase;
+}
+#call-to-action {
   width: 1440px;
   height: 400px;
   justify-content: center;
@@ -44,18 +35,40 @@ body {
   margin: 0 auto;
   font-size: 25pt;
 }
-.description-hersheypark {
-  background-color: #f04e23;
-  width: 722px;
-  height: 498px;
-  position: absolute;
-  right: 0;
-  padding: 20px;
-  top: 100px;
-  box-shadow: 20px 20px 0px 0px rgba(0, 0, 0, 1);
+.row-columns {
+  margin: 20px;
+  position: relative;
+  margin: 0 auto;
+  width: 1440px;
+  height: 1037px;
+  top: 135px;
 }
-a:link,
-a:visited {
+.row-columns-reversed {
+  margin: 20px;
+  position: relative;
+  margin: 0 auto;
+  width: 1440px;
+  height: 964px;
+  display: flex;
+  flex-direction: row-reverse;
+  top: 69px;
+}
+.image-container {
+  position: absolute;
+  width: 1003px;
+  height: 527px;
+  right: auto;
+  box-shadow: 15px 15px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.image-container-reversed {
+  position: absolute;
+  width: 1003px;
+  height: 527px;
+  right: auto;
+  box-shadow: -15px 15px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.links-to-website a:link,
+.links-to-website a:visited {
   background-color: white;
   color: black;
   width: 297px;
@@ -67,16 +80,149 @@ a:visited {
   border-radius: 30px;
   box-shadow: 20px 15px 0px 9px rgba(0, 0, 0, 1);
 }
-a:hover,
-a:active {
+.links-to-website a:hover,
+.links-to-website a:active {
   background-color: black;
   color: white;
   box-shadow: 20px 15px 0px 9px rgba(0, 0, 0, 0);
 }
-.image-container {
+.links-to-website-reversed a:link,
+.links-to-website-reversed a:visited {
+  background-color: white;
+  color: black;
+  width: 297px;
+  height: 94px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 95px;
+  border-radius: 30px;
+  box-shadow: -20px 15px 0px 9px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+.links-to-website-reversed a:hover,
+.links-to-website-reversed a:active {
+  background-color: black;
+  color: white;
+  box-shadow: -20px 15px 0px 9px rgba(0, 0, 0, 0);
+  text-align: center;
+}
+.description-hersheypark {
+  background-color: #f04e23;
+  width: 722px;
+  height: 498px;
   position: absolute;
-  width: 1003px;
-  height: 527px;
-  right: auto;
-  box-shadow: 15px 15px 5px 0px rgba(0, 0, 0, 0.75);
+  right: 0;
+  padding: 20px;
+  top: 100px;
+  box-shadow: 20px 20px 0px 0px rgba(0, 0, 0, 1);
+}
+.description-gettysburg-reversed {
+  background-color: #ffdd00;
+  width: 722px;
+  height: 498px;
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  top: 100px;
+  text-align: right;
+  box-shadow: -20px 20px 0px 0px rgba(0, 0, 0, 1);
+}
+.description-state-capitol {
+  background-color: #60c3ad;
+  width: 722px;
+  height: 498px;
+  position: absolute;
+  right: 0;
+  padding: 20px;
+  top: 100px;
+  box-shadow: 20px 20px 0px 0px rgba(0, 0, 0, 1);
+}
+.description-raystown-lake-reversed {
+  background-color: #9dad20;
+  width: 722px;
+  height: 498px;
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  top: 100px;
+  text-align: right;
+  box-shadow: -20px 20px 0px 0px rgba(0, 0, 0, 1);
+}
+.description-railroad-museum-capitol {
+  background-color: #e45f6b;
+  width: 722px;
+  height: 498px;
+  position: absolute;
+  right: 0;
+  padding: 20px;
+  top: 100px;
+  box-shadow: 20px 20px 0px 0px rgba(0, 0, 0, 1);
+}
+.description-central-market-reversed {
+  background-color: #60c3ad;
+  width: 722px;
+  height: 498px;
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  top: 100px;
+  text-align: right;
+  box-shadow: -20px 20px 0px 0px rgba(0, 0, 0, 1);
+}
+.description-pine-grove {
+  background-color: #ffdd00;
+  width: 722px;
+  height: 498px;
+  position: absolute;
+  right: 0;
+  padding: 20px;
+  top: 100px;
+  box-shadow: 20px 20px 0px 0px rgba(0, 0, 0, 1);
+}
+.description-worlds-end-reversed {
+  background-color: #e45f6b;
+  width: 722px;
+  height: 498px;
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  top: 100px;
+  text-align: right;
+  box-shadow: -20px 20px 0px 0px rgba(0, 0, 0, 1);
+}
+.description-lewisburg {
+  background-color: #f04e23;
+  width: 722px;
+  height: 498px;
+  position: absolute;
+  right: 0;
+  padding: 20px;
+  top: 100px;
+  box-shadow: 20px 20px 0px 0px rgba(0, 0, 0, 1);
+}
+.description-pa-grand-canyon-reversed {
+  background-color: #9dad20;
+  width: 722px;
+  height: 498px;
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  top: 100px;
+  text-align: right;
+  box-shadow: -20px 20px 0px 0px rgba(0, 0, 0, 1);
+}
+.footer-container {
+  text-align: center;
+  width: 1440px;
+  height: 577px;
+  background-color: black;
+  color: white;
+  margin: 0 auto;
+}
+.long-line {
+  margin-top: 63px;
+}
+.short-line {
+  margin-top: 271px;
 }
