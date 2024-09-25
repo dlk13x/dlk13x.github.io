@@ -13,7 +13,7 @@ body {
 #front-cover {
   width: 1440px;
   height: 569px;
-  background-image: url(images/kid-and-girl.png);
+  background-image: url(images/kid-and-girl.jpg);
   background-size: cover;
 }
 #front-cover > div {
