@@ -241,6 +241,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 40px;
+  margin-top: 32px;
 }
 
 .app-icons a {
@@ -258,4 +259,12 @@ body {
 .active-years,
 .company-name {
   margin: 0;
+}
+.long-footer-line {
+  margin-top: 63px;
+  display: block;
+}
+.short-footer-line {
+  margin-top: 40px;
+  display: block;
 }
