@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/vgh8gnf.css" />
+    <title>Document</title>
+    <style>
+      main {
+        padding: 1em;
+      }
+      #toggle-nav {
+        display: none;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+      }
+      #primary-nav {
+        background-color: burlywood;
+      }
+      #primary-nav ul {
+        padding: 0;
+      }
+      #primary-nav li {
+        list-style: none;
+        display: inline-block;
+      }
+      #primary-nav a {
+        display: block;
+        padding: 0.5em 1em;
+      }
+      @media (max-width: 767px) {
+        #primary-nav {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: grid-template-rows 0.5s ease-out;
+        }
+        body.nav-open #primary-nav {
+          grid-template-rows: 1fr;
+        }
+        .inner {
+          overflow: hidden;
+        }
+        #toggle-nav {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="#"> Home</a></li>
+          <li><a href="#"> About</a></li>
+          <li><a href="#"> Step 1</a></li>
+          <li><a href="#"> Step 2</a></li>
+          <li><a href="#"> Step 3</a></li>
+          <li><a href="#"> Step 4</a></li>
+          <li><a href="#"> Step 5</a></li>
+          <li><a href="#"> Step 6</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <p>erm what the woeirthjowsie4hnrf</p>
+    </main>
+    <script>
+      window.onload = () => {
+        // Correctly reference the button by its ID
+        const toggleNav = document.getElementById("toggle-nav");
+
+        // Set the initial innerHTML
+        toggleNav.innerHTML = "&#9776;";
+
+        // Add the event listener to the button
+        toggleNav.addEventListener("click", () => {
+          // Toggle the class on the body
+          document.body.classList.toggle("nav-open");
+          toggleNav.innerHTML = document.body.classList.contains("nav-open")
+            ? "&#x2715;"
+            : "&#9776;";
+        });
+      };
+    </script>
+  </body>
+</html>

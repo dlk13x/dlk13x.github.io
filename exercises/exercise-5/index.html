@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" title="bruh"></div>
+    <script>
+      // This is JavaScript
+      /*
+      This is a 
+      multiline comment
+      */
+      const box = document.getElementById("box");
+      box.onmouseover = () => {
+        //alert("hello");
+        box.style.backgroundColor = "red";
+        box.style.backgroundImage =
+          " url( https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/22819812/blade.jpg?quality=90&strip=all&crop=7.8125,0,84.375,100)";
+      };
+      console.log(box);
+    </script>
+  </body>
+</html>

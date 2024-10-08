@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/vgh8gnf.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <title>Spawn</title>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="home.html"> Home</a></li>
+          <li><a href="devil-jin.html"> Devil Jin</a></li>
+          <li><a href="spawn.html"> Spawn</a></li>
+          <li><a href="blade.html"> Blade</a></li>
+          <li><a href="wolverine.html"> Wolverine</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="gif-container">
+      <img src="gifs/spawn-cape.gif" alt="deviljin" />
+    </div>
+    <main>
+      <div class="text-container">
+        <h1>Spawn</h1>
+      </div>
+    </main>
+    <script>
+      window.onload = () => {
+        // Correctly reference the button by its ID
+        const toggleNav = document.getElementById("toggle-nav");
+
+        // Set the initial innerHTML
+        toggleNav.innerHTML = "&#9776;";
+
+        // Add the event listener to the button
+        toggleNav.addEventListener("click", () => {
+          // Toggle the class on the body
+          document.body.classList.toggle("nav-open");
+          toggleNav.innerHTML = document.body.classList.contains("nav-open")
+            ? "&#x2715;"
+            : "&#9776;";
+        });
+      };
+    </script>
+  </body>
+</html>
