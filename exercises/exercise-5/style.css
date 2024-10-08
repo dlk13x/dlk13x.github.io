@@ -9,6 +9,7 @@ body {
   position: absolute;
   right: 1em;
   top: 1em;
+  z-index: 10;
 }
 
 #primary-nav {
@@ -16,6 +17,8 @@ body {
   width: 100%;
   padding: 1em;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 #primary-nav ul {
@@ -52,25 +55,29 @@ main {
 
 @media (max-width: 767px) {
   #primary-nav {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.5s ease-out;
-  }
-
-  #primary-nav ul {
-    flex-direction: column;
-    gap: 0;
+    display: none;
   }
 
   body.nav-open #primary-nav {
-    grid-template-rows: 1fr;
-  }
-
-  .inner {
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #toggle-nav {
     display: block;
+  }
+}
+@media (max-width: 767px) {
+  #primary-nav a {
+    font-size: 14px;
+  }
+
+  main {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
   }
 }

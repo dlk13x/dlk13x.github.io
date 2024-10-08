@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/vgh8gnf.css" />
     <link rel="stylesheet" href="fonts.css" />
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="images/star favvon for exercise.png"
+    />
     <title>Home</title>
   </head>
   <body>
@@ -31,15 +36,10 @@
     </main>
     <script>
       window.onload = () => {
-        // Correctly reference the button by its ID
         const toggleNav = document.getElementById("toggle-nav");
-
-        // Set the initial innerHTML
         toggleNav.innerHTML = "&#9776;";
 
-        // Add the event listener to the button
         toggleNav.addEventListener("click", () => {
-          // Toggle the class on the body
           document.body.classList.toggle("nav-open");
           toggleNav.innerHTML = document.body.classList.contains("nav-open")
             ? "&#x2715;"
