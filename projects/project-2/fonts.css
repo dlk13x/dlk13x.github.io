@@ -1,0 +1,70 @@
+.inner {
+  font-family: "parabolica", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+}
+
+@font-face {
+  font-family: "Milker";
+  src: url("fonts/Milker.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header-container > h1 {
+  font-family: "Milker", sans-serif;
+  letter-spacing: 3px;
+  font-size: 40px;
+  color: #4d3935;
+}
+.link-to-start > h2 {
+  font-family: "Milker", sans-serif;
+  letter-spacing: 3px;
+  font-size: 24px;
+  color: #fdffff;
+}
+
+.home-text-container {
+  font-family: "parabolica", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 20px;
+}
+
+#start-button {
+  font-family: "ofelia-text", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 52px;
+}
+.text-container {
+  font-family: "parabolica", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 20px;
+}
+.nav-buttons {
+  font-family: "ofelia-text", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 28px;
+}
+.nav-buttons-2 {
+  font-family: "ofelia-text", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 28px;
+}
+.footer {
+  font-family: "parabolica", sans-serif;
+  font-weight: 700px;
+  font-style: normal;
+  font-size: 13px;
+}
+.text-container > h2 {
+  font-family: "Milker", sans-serif;
+  letter-spacing: 3px;
+  font-size: 24px;
+  color: #4d3935;
+}

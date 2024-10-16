@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/vgh8gnf.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <title>About</title>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="home.html"> Home</a></li>
+          <li><a href="about.html"> About</a></li>
+          <li><a href="step-1.html"> Step 1</a></li>
+          <li><a href="step-2.html"> Step 2</a></li>
+          <li><a href="step-3.html"> Step 3</a></li>
+          <li><a href="step-4.html"> Step 4</a></li>
+          <li><a href="step-5.html"> Step 5</a></li>
+          <li><a href="step-6.html"> Step 6</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header-container">
+      <h1>about The Black Forest Cake</h1>
+    </div>
+    <div class="row">
+      <div class="image-container">
+        <img src="images/aboutpage.jpg" alt="aboutpage" />
+      </div>
+      <main>
+        <div class="text-container">
+          <p>
+            The origin of the Black Forest cake (Schwarzwälder Kirschtorte) is
+            debated, but a widely accepted theory suggests it was created in the
+            early 20th century in the Black Forest region of Baden-Württemberg,
+            Germany.
+          </p>
+
+          <p>
+            The most popular claim attributes its invention to pastry chef Josef
+            Keller, who worked at Café Ahrend in Bad Godesberg near Bonn. He
+            reportedly developed the recipe in 1915, combining chocolate sponge
+            cake, whipped cream, cherries, and cherry liqueur (Kirschwasser) to
+            create this iconic dessert.
+          </p>
+        </div>
+      </main>
+    </div>
+    <div class="row-buttons">
+      <div class="nav-buttons">
+        <div class="link-to-diff-pages-1">
+          <a href="home.html"> <h4>Home</h4> </a>
+        </div>
+        <div class="link-to-diff-pages-2">
+          <a href="step-1.html"> <h4>Next</h4> </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = () => {
+        const toggleNav = document.getElementById("toggle-nav");
+        toggleNav.innerHTML = "&#9776;";
+
+        toggleNav.addEventListener("click", () => {
+          document.body.classList.toggle("nav-open");
+          toggleNav.innerHTML = document.body.classList.contains("nav-open")
+            ? "&#x2715;"
+            : "&#9776;";
+        });
+      };
+    </script>
+    <div class="footer">
+      <p>&copy;2024 - All rights reserved</p>
+      <div class="social-media-icons">
+        <a href=""><img src="sm-icons/facebook-icon.png" alt="Facebook" /></a>
+        <a href=""><img src="sm-icons/insta-icon.png" alt="Instagram" /></a>
+        <a href=""><img src="sm-icons/x-icon.png" alt="X" /></a>
+        <a href=""><img src="sm-icons/youtube-icon.png" alt="Youtube" /></a>
+      </div>
+    </div>
+  </body>
+</html>

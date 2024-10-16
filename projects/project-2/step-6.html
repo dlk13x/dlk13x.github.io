@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/vgh8gnf.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <title>Step 6</title>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="home.html"> Home</a></li>
+          <li><a href="about.html"> About</a></li>
+          <li><a href="step-1.html"> Step 1</a></li>
+          <li><a href="step-2.html"> Step 2</a></li>
+          <li><a href="step-3.html"> Step 3</a></li>
+          <li><a href="step-4.html"> Step 4</a></li>
+          <li><a href="step-5.html"> Step 5</a></li>
+          <li><a href="step-6.html"> Step 6</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header-container">
+      <h1>6. ASSEMBLY</h1>
+    </div>
+    <div class="row">
+      <div class="image-container">
+        <img src="images/assembly.jpg" alt="step3" />
+      </div>
+      <main>
+        <div class="text-container">
+          <h2>ASSEMBLY</h2>
+          <ul class="list">
+            <li>250 gr. fresh cherries</li>
+            <li>150 gr. cherry confiture</li>
+            <li>50 gr. dark chocolate (70%)</li>
+            <li>20 gr. cocoa powder</li>
+            <li>5 gr. neutral or sunflower oil</li>
+          </ul>
+          <ul>
+            <li>Cut the cake into four 1 cm discs.</li>
+            <li>
+              Melt chocolate, brush the bottom disc, and let it harden. Place it
+              in a 22 cm tin and soak with kirsch syrup.
+            </li>
+            <li>
+              Spread cherry jam and pipe white chocolate ganache on top,
+              smoothing it out.
+            </li>
+            <li>
+              Add the next disc, soak with kirsch, and place cherries on top.
+              Pipe chocolate cream and smooth.
+            </li>
+            <li>
+              Add the third disc, spread the remaining jam, and pipe more
+              ganache.
+            </li>
+            <li>
+              Place the last disc, soak with kirsch, and refrigerate for 4
+              hours.
+            </li>
+            <li>
+              Cover the cake with chocolate, sprinkle cocoa, and decorate with
+              cherries.
+            </li>
+            <li>Chill, then let sit for 10 minutes before serving.</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <div class="row-buttons">
+      <div class="nav-buttons">
+        <div class="link-to-diff-pages-1">
+          <a href="step-5.html"> <h4>Back</h4> </a>
+        </div>
+        <div class="link-to-diff-pages-2">
+          <a href="home.html"> <h4>Home</h4> </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = () => {
+        const toggleNav = document.getElementById("toggle-nav");
+        toggleNav.innerHTML = "&#9776;";
+
+        toggleNav.addEventListener("click", () => {
+          document.body.classList.toggle("nav-open");
+          toggleNav.innerHTML = document.body.classList.contains("nav-open")
+            ? "&#x2715;"
+            : "&#9776;";
+        });
+      };
+    </script>
+  </body>
+</html>

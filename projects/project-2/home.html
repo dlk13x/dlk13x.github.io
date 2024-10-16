@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/vgh8gnf.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="home.html"> Home</a></li>
+          <li><a href="about.html"> About</a></li>
+          <li><a href="step-1.html"> Step 1</a></li>
+          <li><a href="step-2.html"> Step 2</a></li>
+          <li><a href="step-3.html"> Step 3</a></li>
+          <li><a href="step-4.html"> Step 4</a></li>
+          <li><a href="step-5.html"> Step 5</a></li>
+          <li><a href="step-6.html"> Step 6</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="cover-container">
+      <img src="images/homepage.jpg" alt="homepage" />
+    </div>
+    <div class="header-container">
+      <h1>Welcome to Our Black Forest Cake Haven!</h1>
+    </div>
+    <main>
+      <div class="home-text-container">
+        <p>
+          Experience the rich flavors of Black Forest Cake, a classic dessert
+          that combines chocolate sponge, fluffy whipped cream, and tangy
+          cherries. Rooted in German tradition, this cake brings the charm of
+          the Black Forest region to your table.
+        </p>
+        <p>
+          Join us to celebrate cake-making with authentic recipes, baking tips,
+          and insights into the cake's history. Whether you're a novice or an
+          expert, embark on a delicious journey to create your own masterpiece.
+        </p>
+        <p>
+          Explore our recipe and delve into the fascinating origins of Black
+          Forest Cake!
+        </p>
+      </div>
+    </main>
+
+    <div id="start-button">
+      <div class="link-to-start">
+        <a href="about.html"> <h2>Start Baking Now!</h2> </a>
+      </div>
+    </div>
+    <script>
+      window.onload = () => {
+        const toggleNav = document.getElementById("toggle-nav");
+        toggleNav.innerHTML = "&#9776;";
+
+        toggleNav.addEventListener("click", () => {
+          document.body.classList.toggle("nav-open");
+          toggleNav.innerHTML = document.body.classList.contains("nav-open")
+            ? "&#x2715;"
+            : "&#9776;";
+        });
+      };
+    </script>
+    <div class="footer">
+      <p>&copy;2024 - All rights reserved</p>
+      <div class="social-media-icons">
+        <a href=""><img src="sm-icons/facebook-icon.png" alt="Facebook" /></a>
+        <a href=""><img src="sm-icons/insta-icon.png" alt="Instagram" /></a>
+        <a href=""><img src="sm-icons/x-icon.png" alt="X" /></a>
+        <a href=""><img src="sm-icons/youtube-icon.png" alt="Youtube" /></a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/vgh8gnf.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <title>Step 4</title>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="home.html"> Home</a></li>
+          <li><a href="about.html"> About</a></li>
+          <li><a href="step-1.html"> Step 1</a></li>
+          <li><a href="step-2.html"> Step 2</a></li>
+          <li><a href="step-3.html"> Step 3</a></li>
+          <li><a href="step-4.html"> Step 4</a></li>
+          <li><a href="step-5.html"> Step 5</a></li>
+          <li><a href="step-6.html"> Step 6</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header-container">
+      <h1>4. PREPARING THE CHOCOLATE COATING</h1>
+    </div>
+    <div class="row">
+      <div class="image-container">
+        <img src="images/choco-coating.jpg" alt="step3" />
+      </div>
+      <main>
+        <div class="text-container">
+          <h2>CHOCOLATE COATING</h2>
+          <ul class="list">
+            <li>100 gr. heavy cream (35% fat)</li>
+            <li>100 gr. mascarpone</li>
+            <li>100 gr. white chocolate ganache</li>
+            <li>100 gr. chocolate diplomat cream</li>
+            <li>40 gr. powdered sugar</li>
+          </ul>
+          <ul>
+            <li>Mix mascarpone and cold cream on low speed until combined.</li>
+            <li>
+              Add icing sugar and beat on medium speed until stiff peaks form.
+            </li>
+            <li>
+              Fold in 100g of chocolate pâte de chocolate and 100g of white
+              chocolate ganache with a spatula.
+            </li>
+            <li>Refrigerate until ready to use.</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <div class="row-buttons">
+      <div class="nav-buttons">
+        <div class="link-to-diff-pages-1">
+          <a href="step-3.html"> <h4>Back</h4> </a>
+        </div>
+        <div class="link-to-diff-pages-2">
+          <a href="step-5.html"> <h4>Next</h4> </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = () => {
+        const toggleNav = document.getElementById("toggle-nav");
+        toggleNav.innerHTML = "&#9776;";
+
+        toggleNav.addEventListener("click", () => {
+          document.body.classList.toggle("nav-open");
+          toggleNav.innerHTML = document.body.classList.contains("nav-open")
+            ? "&#x2715;"
+            : "&#9776;";
+        });
+      };
+    </script>
+  </body>
+</html>

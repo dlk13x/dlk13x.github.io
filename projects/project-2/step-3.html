@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/vgh8gnf.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <title>Step 3</title>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="home.html"> Home</a></li>
+          <li><a href="about.html"> About</a></li>
+          <li><a href="step-1.html"> Step 1</a></li>
+          <li><a href="step-2.html"> Step 2</a></li>
+          <li><a href="step-3.html"> Step 3</a></li>
+          <li><a href="step-4.html"> Step 4</a></li>
+          <li><a href="step-5.html"> Step 5</a></li>
+          <li><a href="step-6.html"> Step 6</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header-container">
+      <h1>3. PREPARING THE CHOCOLATE DIPLOMAT CREAM</h1>
+    </div>
+    <div class="row">
+      <div class="image-container">
+        <img src="images/choco-cream.jpg" alt="step4" />
+      </div>
+      <main>
+        <div class="text-container">
+          <h2>CHOCOLATE DIPLOMAT CREAM</h2>
+          <ul class="list">
+            <li>170 gr. whole milk</li>
+            <li>120 gr. mascarpone</li>
+            <li>120 gr. heavy cream (35% fat)</li>
+            <li>40 gr. egg yolks (2)</li>
+            <li>40 gr. dark chocolate (70%)</li>
+            <li>40 gr. white sugar</li>
+            <li>10 gr. corn flour</li>
+            <li>7 gr. cocoa powder</li>
+            <li>3 gr. gelatin</li>
+          </ul>
+          <ul>
+            <li>Hydrate gelatin in cold water for 10 minutes.</li>
+            <li>Boil the milk.</li>
+            <li>Melt white chocolate in the microwave in short bursts.</li>
+            <li>Mix egg yolks, cornflour, sugar, and cocoa powder.</li>
+            <li>Gradually whisk in the hot milk.</li>
+            <li>Cook until thickened, then remove from heat.</li>
+            <li>
+              Add gelatin and mascarpone, whisk, and refrigerate for 4 hours.
+            </li>
+            <li>
+              Whip cream to stiff peaks and fold into the mixture before
+              assembling.
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <div class="row-buttons">
+      <div class="nav-buttons">
+        <div class="link-to-diff-pages-1">
+          <a href="step-2.html"> <h4>Back</h4> </a>
+        </div>
+        <div class="link-to-diff-pages-2">
+          <a href="step-4.html"> <h4>Next</h4> </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = () => {
+        const toggleNav = document.getElementById("toggle-nav");
+        toggleNav.innerHTML = "&#9776;";
+
+        toggleNav.addEventListener("click", () => {
+          document.body.classList.toggle("nav-open");
+          toggleNav.innerHTML = document.body.classList.contains("nav-open")
+            ? "&#x2715;"
+            : "&#9776;";
+        });
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/vgh8gnf.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <title>Step 2</title>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="home.html"> Home</a></li>
+          <li><a href="about.html"> About</a></li>
+          <li><a href="step-1.html"> Step 1</a></li>
+          <li><a href="step-2.html"> Step 2</a></li>
+          <li><a href="step-3.html"> Step 3</a></li>
+          <li><a href="step-4.html"> Step 4</a></li>
+          <li><a href="step-5.html"> Step 5</a></li>
+          <li><a href="step-6.html"> Step 6</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header-container">
+      <h1>2. PREPARING THE WHITE CHOCOLATE GANACHE</h1>
+    </div>
+    <div class="row">
+      <div class="image-container">
+        <img src="images/white-choco-ganache.jpg" alt="step2" />
+      </div>
+      <main>
+        <div class="text-container">
+          <h2>WHITE CHOCOLATE GANACHE</h2>
+          <ul class="list">
+            <li>400 gr. heavy cream (35% fat)</li>
+            <li>170 gr. white chocolate</li>
+            <li>30 gr. kirsch or cherry liqueur</li>
+            <li>5 gr. vanilla</li>
+            <li>30 gr. cocoa powder</li>
+          </ul>
+          <ul>
+            <li>Hydrate the gelatin in cold water for 10 minutes.</li>
+            <li>
+              Heat 120g of cream with vanilla in a saucepan until it boils.
+            </li>
+            <li>Melt white chocolate in the microwave in short bursts.</li>
+            <li>
+              Pour the boiled cream over the melted chocolate and whisk until
+              smooth.
+            </li>
+            <li>Add kirsch or cherry liqueur and whisk again.</li>
+            <li>Add the remaining cream and whisk until shiny and uniform.</li>
+            <li>Cover with cling film and refrigerate for at least 4 hours.</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <div class="row-buttons">
+      <div class="nav-buttons">
+        <div class="link-to-diff-pages-1">
+          <a href="step-1.html"> <h4>Back</h4> </a>
+        </div>
+        <div class="link-to-diff-pages-2">
+          <a href="step-3.html"> <h4>Next</h4> </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = () => {
+        const toggleNav = document.getElementById("toggle-nav");
+        toggleNav.innerHTML = "&#9776;";
+
+        toggleNav.addEventListener("click", () => {
+          document.body.classList.toggle("nav-open");
+          toggleNav.innerHTML = document.body.classList.contains("nav-open")
+            ? "&#x2715;"
+            : "&#9776;";
+        });
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/vgh8gnf.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <title>Step 1</title>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="home.html"> Home</a></li>
+          <li><a href="about.html"> About</a></li>
+          <li><a href="step-1.html"> Step 1</a></li>
+          <li><a href="step-2.html"> Step 2</a></li>
+          <li><a href="step-3.html"> Step 3</a></li>
+          <li><a href="step-4.html"> Step 4</a></li>
+          <li><a href="step-5.html"> Step 5</a></li>
+          <li><a href="step-6.html"> Step 6</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header-container">
+      <h1>1. PREPARING THE CHOCOLATE SPONGE CAKE</h1>
+    </div>
+    <div class="row">
+      <div class="image-container">
+        <img src="images/sponge-cake.jpg" alt="step1" />
+      </div>
+      <main>
+        <div class="text-container">
+          <h2>Chocolate sponge cake</h2>
+          <ul class="list">
+            <li>180 gr. pastry flour or all purpose flour</li>
+            <li>180 gr. egg whites (6)</li>
+            <li>180 gr. white sugar</li>
+            <li>100 gr. egg yolks (6)</li>
+            <li>30 gr. cocoa powder</li>
+          </ul>
+          <ul>
+            <li>Beat egg whites at medium speed until foamy.</li>
+            <li>
+              Gradually add sugar and increase speed until firm meringue forms.
+            </li>
+            <li>Add egg yolks and beat until just combined.</li>
+            <li>
+              Sift flour and cocoa powder twice over the mixture, and fold in
+              with a spatula.
+            </li>
+            <li>Pour into a 22 cm baking tin lined with baking paper.</li>
+            <li>Bake at 180°C for 45 minutes.</li>
+            <li>Cool on a wire rack and set aside.</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <div class="row-buttons">
+      <div class="nav-buttons">
+        <div class="link-to-diff-pages-1">
+          <a href="about.html"> <h4>Back</h4> </a>
+        </div>
+        <div class="link-to-diff-pages-2">
+          <a href="step-2.html"> <h4>Next</h4> </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = () => {
+        const toggleNav = document.getElementById("toggle-nav");
+        toggleNav.innerHTML = "&#9776;";
+
+        toggleNav.addEventListener("click", () => {
+          document.body.classList.toggle("nav-open");
+          toggleNav.innerHTML = document.body.classList.contains("nav-open")
+            ? "&#x2715;"
+            : "&#9776;";
+        });
+      };
+    </script>
+  </body>
+</html>
