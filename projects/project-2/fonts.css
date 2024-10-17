@@ -56,7 +56,8 @@
   font-style: normal;
   font-size: 28px;
 }
-.footer {
+.footer,
+.footer-2 {
   font-family: "parabolica", sans-serif;
   font-weight: 700px;
   font-style: normal;
@@ -67,4 +68,8 @@
   letter-spacing: 3px;
   font-size: 24px;
   color: #4d3935;
+}
+.brown-text-bold {
+  color: #4d3935;
+  font-weight: bold;
 }
