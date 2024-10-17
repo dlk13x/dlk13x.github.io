@@ -65,7 +65,7 @@ body {
   padding-bottom: 45px;
   letter-spacing: 3px;
 }
-
+/*media area*/
 @media (max-width: 767px) {
   #primary-nav {
     display: none;
@@ -88,8 +88,14 @@ body {
   #primary-nav a {
     font-size: 14px;
   }
+  .row {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
 }
-
+/*media area*/
 .home-text-container {
   width: 748px;
   height: 270px;
