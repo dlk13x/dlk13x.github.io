@@ -73,11 +73,15 @@ img {
 
 #header-container {
   max-width: 1440px;
-  padding-top: 47px;
+  padding-top: 50px;
   padding-bottom: 22px;
   letter-spacing: 3px;
   margin: 0 auto;
   height: 150px;
+}
+
+#start-button {
+  width: 100%;
 }
 #primary-nav {
   background-color: #da3245;
@@ -144,14 +148,19 @@ img {
   .cover-container {
     width: 100%;
     max-width: 767px;
-    height: 450px;
+    height: 400px;
     margin: 0 auto;
+  }
+  .row {
+    width: 100%;
   }
   main > #home-text-container {
     width: 600px;
     font-size: 16px;
     padding-bottom: 0;
+    height: 300px;
   }
+
   .header-container {
     font-size: 20px;
   }
@@ -169,11 +178,17 @@ img {
     padding: 20px;
     margin: 0 auto;
     text-align: center;
+    padding-top: 50px;
   }
-  main > .text-container {
+
+  .text-container {
     font-size: 16px;
-    height: 500px;
     width: 100%;
+    margin: 0;
+    padding-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
   main > .row-buttons {
@@ -189,10 +204,35 @@ img {
 
   main > .nav-buttons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     justify-content: space-between;
     padding-top: 0;
+    font-size: 20px;
+  }
+
+  main > .row-buttons-2 {
+    width: 100%;
+    max-width: 680px;
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding: 30px;
+  }
+  main > .nav-buttons-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 0;
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 680px;
+    position: 30px;
   }
 }
 
@@ -205,7 +245,7 @@ img {
   padding-bottom: 45px;
 }
 
-main > .text-container {
+.text-container {
   display: flex;
   flex-direction: column;
   width: 575px;
@@ -256,7 +296,7 @@ main > .text-container {
   width: 680px;
   height: 67px;
   padding-top: 20px;
-  padding-right: 20px;
+  padding-right: 25px;
 }
 
 .link-to-diff-pages-1 a,
