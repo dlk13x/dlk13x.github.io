@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://use.typekit.net/vgh8gnf.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/vgh8gnf.css" />
     <link rel="stylesheet" href="fonts.css" />
     <title>Home</title>
   </head>
@@ -27,11 +27,11 @@
     <div class="cover-container">
       <img src="images/homepage.jpg" alt="homepage" />
     </div>
-    <div class="header-container">
-      <h1>Welcome to Our Black Forest Cake Haven!</h1>
-    </div>
     <main>
-      <div class="home-text-container">
+      <div id="header-container">
+        <h1>Welcome to Our Black Forest Cake Haven!</h1>
+      </div>
+      <div id="home-text-container">
         <p>
           Experience the rich flavors of Black Forest Cake, a classic dessert
           that combines chocolate sponge, fluffy whipped cream, and tangy
@@ -48,13 +48,12 @@
           Forest Cake!
         </p>
       </div>
-    </main>
-
-    <div id="start-button">
-      <div class="link-to-start">
-        <a href="about.html"> <h2>Start Baking Now!</h2> </a>
+      <div id="start-button">
+        <div class="link-to-start">
+          <a href="about.html"> <h2>Start Baking Now!</h2> </a>
+        </div>
       </div>
-    </div>
+    </main>
     <script>
       window.onload = () => {
         const toggleNav = document.getElementById("toggle-nav");
