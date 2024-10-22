@@ -63,8 +63,7 @@ img {
   margin: 0 auto;
   background-size: cover;
 }
-.image-container,
-img {
+.image-container {
   width: 680px;
   height: 449px;
   margin: 0 auto;
