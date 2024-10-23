@@ -344,14 +344,18 @@ img {
 .social-media-icons a img {
   width: 44px;
   height: 44px;
-}
-.social-media-icons {
-  width: 293px;
-  height: 44px;
-  gap: 32px;
-  display: flex;
   margin: 0 auto;
 }
+.social-media-icons {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .link-to-start a:link,
 .link-to-start a:visited {
   background-color: #4d3935;
