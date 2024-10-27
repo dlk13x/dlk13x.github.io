@@ -18,12 +18,6 @@
   font-size: 40px;
   color: #4d3935;
 }
-.link-to-start > h2 {
-  font-family: "Milker", sans-serif;
-  letter-spacing: 3px;
-  font-size: 24px;
-  color: #fdffff;
-}
 
 #home-text-container {
   font-family: "parabolica", sans-serif;
@@ -37,6 +31,7 @@
   font-weight: 700;
   font-style: normal;
   padding-bottom: 52px;
+  font-size: 24px;
 }
 .text-container {
   font-family: "parabolica", sans-serif;
