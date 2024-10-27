@@ -72,8 +72,7 @@ img {
   color: black;
 }
 .cover-container {
-  width: 1920px;
-  height: 816px;
+  width: 100%px;
   margin: 0 auto;
   background-size: cover;
 }
