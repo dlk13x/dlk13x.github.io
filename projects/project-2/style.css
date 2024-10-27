@@ -72,7 +72,7 @@ img {
   color: black;
 }
 .cover-container {
-  width: 100%px;
+  width: 100%;
   margin: 0 auto;
   background-size: cover;
 }
@@ -83,7 +83,6 @@ img {
   padding-bottom: 22px;
   letter-spacing: 3px;
   margin: 0 auto;
-  height: 150px;
 }
 
 #start-button {
@@ -157,17 +156,15 @@ img {
   .cover-container {
     width: 100%;
     max-width: 767px;
-    height: 400px;
     margin: 0 auto;
   }
-  .row {
-    width: 100%;
-  }
+
   main > #home-text-container {
-    width: 600px;
     font-size: 16px;
     padding-bottom: 0;
     height: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .header-container {
@@ -196,11 +193,12 @@ img {
     display: flex;
     flex-direction: column;
   }
+  #start-button {
+    height: 500px;
+  }
 }
 
 #home-text-container {
-  width: 1200px;
-  height: 450px;
   margin: 0 auto;
   line-height: 150%;
   text-align: center;
