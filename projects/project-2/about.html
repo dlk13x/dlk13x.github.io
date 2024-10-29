@@ -25,13 +25,15 @@
         </ul>
       </div>
     </nav>
-    <div id="header-container">
-      <h1>about The Black Forest Cake</h1>
-    </div>
-    <div class="flex">
+    <div class="content-wrapper">
+      <div id="header-container">
+        <h1>about The Black Forest Cake</h1>
+      </div>
       <main>
-        <div class="image-container">
-          <img src="images/aboutpage.jpg" alt="aboutpage" />
+        <div class="flex">
+          <div class="image-container">
+            <img src="images/aboutpage.jpg" alt="aboutpage" />
+          </div>
           <div class="text-container">
             <p>
               The origin of the Black Forest cake (Schwarzwälder Kirschtorte) is
@@ -49,7 +51,6 @@
             </p>
           </div>
         </div>
-
         <div class="row-buttons">
           <div class="nav-buttons">
             <div class="link-to-diff-pages-1">
@@ -61,7 +62,23 @@
           </div>
         </div>
       </main>
+      <div class="footer">
+        <p>&copy;2024 - All rights reserved</p>
+        <div class="social-media-icons">
+          <a href=""
+            ><img src="sm-icons/Facebook_Logo_Secondary.png" alt="Facebook"
+          /></a>
+          <a href=""
+            ><img src="sm-icons/Instagram_Glyph_White.png" alt="Instagram"
+          /></a>
+          <a href=""><img src="sm-icons/logo-white.png" alt="X" /></a>
+          <a href=""
+            ><img src="sm-icons/yt_icon_mono_dark.png" alt="Youtube"
+          /></a>
+        </div>
+      </div>
     </div>
+
     <script>
       window.onload = () => {
         const toggleNav = document.getElementById("toggle-nav");
@@ -75,20 +92,5 @@
         });
       };
     </script>
-    <div class="footer">
-      <p>&copy;2024 - All rights reserved</p>
-      <div class="social-media-icons">
-        <a href=""
-          ><img src="sm-icons/Facebook_Logo_Secondary.png" alt="Facebook"
-        /></a>
-        <a href=""
-          ><img src="sm-icons/Instagram_Glyph_White.png" alt="Instagram"
-        /></a>
-        <a href=""><img src="sm-icons/logo-white.png" alt="X" /></a>
-        <a href=""
-          ><img src="sm-icons/yt_icon_mono_dark.png" alt="Youtube"
-        /></a>
-      </div>
-    </div>
   </body>
 </html>
