@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpg" href="images/favicon.jpg" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Reviews</title>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="home.html">home .</a></li>
+          <li><a href="synposis.html">synposis .</a></li>
+          <li><a href="about-the-author.html"> about the author .</a></li>
+          <li><a href="reviews.html">reviews .</a></li>
+          <li><a href="buy-the-book.html"> buy the book .</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="header-container">
+        <h1>REVIEWS</h1>
+      </div>
+      <div class="image-text-container">
+        <div class="image-container-low">
+          <img src="images/book-cover.jpg" alt="book-jacket-2" />
+        </div>
+        <div class="text-container-low">
+          <p>A Journey Through Musical Mastery | Rating: ★★★★☆</p>
+          <p>
+            A well-researched and fascinating insight into one of the most
+            influential pop artists of the 21st century. The book dives deep
+            into Utada's career and personal life with a narrative that captures
+            both fans and new listeners alike.
+          </p>
+          <p>A Deep Dive into Utada's Legacy | Rating: ★★★★☆</p>
+          <p>
+            Destini Kitchen takes readers on a comprehensive journey through the
+            highs and lows of Utada's life. While the writing sometimes delves
+            heavily into industry jargon, the insight into Utadas discography is
+            invaluable. Highly recommended for die-hard fans of Hikaru Utada.
+          </p>
+          <div id="buy-now-button">
+            <div class="link-to-buy-now">
+              <a href="buy-the-book.html"><p>BUY NOW</p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="footer">
+      <p>&copy;2024 - NikoPublishing, Inc. All rights reserved.</p>
+    </div>
+  </body>
+  <script>
+    window.onload = () => {
+      const toggleNav = document.getElementById("toggle-nav");
+      toggleNav.innerHTML = "&#9776;";
+
+      toggleNav.addEventListener("click", () => {
+        document.body.classList.toggle("nav-open");
+        toggleNav.innerHTML = document.body.classList.contains("nav-open")
+          ? "&#x2715;"
+          : "&#9776;";
+      });
+    };
+  </script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpg" href="images/favicon.jpg" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>About The Author</title>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="home.html">home .</a></li>
+          <li><a href="synposis.html">synposis .</a></li>
+          <li><a href="about-the-author.html"> about the author .</a></li>
+          <li><a href="reviews.html">reviews .</a></li>
+          <li><a href="buy-the-book.html"> buy the book .</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="header-container">
+        <h1>DESTINI KITCHEN</h1>
+      </div>
+      <div class="image-container-rounded">
+        <img src="images/self-portrait-for-web-design.jpg" alt="hikaru_utada" />
+      </div>
+      <div class="text-container-info">
+        <p>
+          Destini Kitchen, a devoted fan of Hikaru Utada, has spent years
+          immersing herself in the music and life story of one of Japan's most
+          influential artists.
+        </p>
+        <p>
+          With a background in graphic design and a passion for storytelling,
+          Destini brings a unique perspective to Utada's journey.
+        </p>
+        <p>
+          Drawing from her extensive knowledge of Japanese pop culture and
+          Utada's discography, she crafts an in-depth exploration of the
+          artist's rise to international fame, her personal struggles, and her
+          impact on the global music scene.
+        </p>
+      </div>
+    </main>
+    <div class="footer">
+      <p>&copy;2024 - NikoPublishing, Inc. All rights reserved.</p>
+    </div>
+  </body>
+  <script>
+    window.onload = () => {
+      const toggleNav = document.getElementById("toggle-nav");
+      toggleNav.innerHTML = "&#9776;";
+
+      toggleNav.addEventListener("click", () => {
+        document.body.classList.toggle("nav-open");
+        toggleNav.innerHTML = document.body.classList.contains("nav-open")
+          ? "&#x2715;"
+          : "&#9776;";
+      });
+    };
+  </script>
+</html>

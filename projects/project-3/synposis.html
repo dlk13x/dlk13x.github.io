@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpg" href="images/favicon.jpg" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Synposis</title>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="home.html">home .</a></li>
+          <li><a href="synposis.html">synposis .</a></li>
+          <li><a href="about-the-author.html"> about the author .</a></li>
+          <li><a href="reviews.html">reviews .</a></li>
+          <li><a href="buy-the-book.html"> buy the book .</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="header-container">
+        <h1>HIKARU UTADA</h1>
+      </div>
+      <div class="image-container-rounded">
+        <img src="images/Utada_United_2006.jpg" alt="hikaru_utada" />
+      </div>
+      <div class="text-container-info">
+        <p>
+          Hikaru Utada's music has
+          <span
+            >captivated millions worldwide, blending soulful melodies with
+            introspective lyrics.
+          </span>
+          But behind the fame lies a complex story of reinvention,
+          self-discovery, and resilience.
+        </p>
+        <p>
+          This biography reveals the artist's path,
+          <span
+            >delving into the highs and lows of her career and personal life, </span
+          >including her journey through multiple languages, cultures, and
+          genres.
+        </p>
+        <p>
+          From her early days as a
+          <span>
+            bilingual teenager in the Japanese music industry to her ventures in
+            English-language albums and celebrated return to J-Pop,</span
+          >
+          this biography provides a comprehensive view of Utada's impact and
+          legacy.
+        </p>
+      </div>
+    </main>
+    <div class="footer">
+      <p>&copy;2024 - NikoPublishing, Inc. All rights reserved.</p>
+    </div>
+  </body>
+  <script>
+    window.onload = () => {
+      const toggleNav = document.getElementById("toggle-nav");
+      toggleNav.innerHTML = "&#9776;";
+
+      toggleNav.addEventListener("click", () => {
+        document.body.classList.toggle("nav-open");
+        toggleNav.innerHTML = document.body.classList.contains("nav-open")
+          ? "&#x2715;"
+          : "&#9776;";
+      });
+    };
+  </script>
+</html>

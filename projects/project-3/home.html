@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpg" href="images/favicon.jpg" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <button id="toggle-nav">&#9776;</button>
+    <nav id="primary-nav" role="navigation">
+      <div class="inner">
+        <ul>
+          <li><a href="home.html">home .</a></li>
+          <li><a href="synposis.html">synposis .</a></li>
+          <li><a href="about-the-author.html"> about the author .</a></li>
+          <li><a href="reviews.html">reviews .</a></li>
+          <li><a href="buy-the-book.html"> buy the book .</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="header-container">
+        <h1>THE JPOP LEGEND HERSELF</h1>
+      </div>
+      <div class="image-container">
+        <img src="images/book-cover.jpg" alt="book-jacket-2" />
+      </div>
+      <div class="text-container-home">
+        <p>
+          Welcome to the official book promotion site for
+          <span>'Hikaru Utada: A Biography of Hikaru Utada'</span>
+        </p>
+        <p>
+          Dive into the fascinating life of
+          <span> one of Japan's most iconic musicians</span>, as told by Destini
+          Kitchen. Explore the artist's journey through
+          <span>
+            triumphs, struggles, and the music that shaped generations.</span
+          >
+        </p>
+      </div>
+      <div id="buy-now-button">
+        <div class="link-to-buy-now">
+          <a href="buy-the-book.html"><p>BUY NOW</p></a>
+        </div>
+      </div>
+    </main>
+    <div class="footer">
+      <p>&copy;2024 - NikoPublishing, Inc. All rights reserved.</p>
+    </div>
+  </body>
+  <script>
+    window.onload = () => {
+      const toggleNav = document.getElementById("toggle-nav");
+      toggleNav.innerHTML = "&#9776;";
+
+      toggleNav.addEventListener("click", () => {
+        document.body.classList.toggle("nav-open");
+        toggleNav.innerHTML = document.body.classList.contains("nav-open")
+          ? "&#x2715;"
+          : "&#9776;";
+      });
+    };
+  </script>
+</html>

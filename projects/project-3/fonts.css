@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "LEMONMILK-Light";
+  src: url("fonts/LEMONMILK-Light.otf") format("opentype");
+  font-weight: 300px;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LEMONMILK-Regular";
+  src: url("fonts/LEMONMILK-Regular.otf") format("opentype");
+  font-weight: 400px;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MusticaPro";
+  src: url("fonts/MusticaPro-SemiBold.otf") format("opentype");
+  font-weight: 300px;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("fonts/Mont-HeavyDEMO.otf") format("opentype");
+  font-weight: 400px;
+  font-style: normal;
+}
+
+.text-container {
+  font-family: "LEMONMILK-Light", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 150%;
+  color: #343434;
+}
+.text-container-info {
+  font-family: "LEMONMILK-Light", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 150%;
+  color: #343434;
+}
+.text-container-home {
+  font-family: "LEMONMILK-Light", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 150%;
+  color: #343434;
+}
+.text-container-low {
+  font-family: "LEMONMILK-Regular", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 150%;
+  color: #343434;
+}
+.header-container {
+  font-family: "LEMONMILK-Regular", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 24px;
+  color: #343434;
+}
+#buy-now-button {
+  font-family: "Mont", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 20px;
+}
+.inner {
+  font-family: "MusticaPro", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 20px;
+}
+.footer {
+  font-family: "LEMONMILK-Light", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 150%;
+  color: #343434;
+}
+span {
+  font-family: "LEMONMILK-Regular", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 20px;
+  color: #343434;
+}
