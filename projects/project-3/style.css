@@ -180,6 +180,31 @@ img {
     display: flex;
     flex-direction: column;
   }
+  .text-container {
+    font-size: 14px;
+    width: 400px;
+  }
+  span {
+    font-size: 14px;
+  }
+  .text-container-home {
+    font-size: 14px;
+    width: 400px;
+  }
+  img {
+    width: 400px;
+  }
+  .image-container {
+    width: 400px;
+  }
+  .text-container-info {
+    font-size: 14px;
+    width: 400px;
+  }
+  .image-text-container {
+    font-size: 14px;
+    width: 400px;
+  }
 }
 .link-to-buy-now a:link,
 .link-to-buy-now a:visited {
