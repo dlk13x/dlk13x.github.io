@@ -177,11 +177,7 @@ img {
   .flex {
     flex-direction: column;
   }
-  .text-container-low {
-    width: 787px;
-    display: flex;
-    flex-direction: column;
-  }
+
   .text-container {
     font-size: 14px;
     width: 400px;
@@ -206,6 +202,8 @@ img {
   .text-container-low {
     font-size: 14px;
     width: 400px;
+    display: flex;
+    flex-direction: column;
   }
   .image-text-container {
     font-size: 14px;
