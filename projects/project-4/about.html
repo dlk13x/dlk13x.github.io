@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="icon" type="image/jpg" href="images/coffee-cup-favicon.jpg" />
+    <link rel="stylesheet" href="https://use.typekit.net/xlr4dvo.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <button id="toggle-nav">&#9776;</button>
+  <nav id="primary-nav" role="navigation">
+    <div class="inner">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <body>
+    <main>
+      <h1 id="about-header">WHO WE ARE</h1>
+      <div class="flex">
+        <div id="container">
+          <div id="about-text-box">
+            <p>
+              Jacob and Emily's love for coffee brought them together, spending
+              countless hours exploring San Francisco's vibrant coffee scene,
+              trying blends, and dreaming of opening their own shop. Life
+              eventually led them to Harrisburg, Pennsylvania, where they were
+              enchanted by its charm and decided it was the perfect place to
+              bring their coffee dreams to life, inspired by their San Francisco
+              adventures.
+            </p>
+            <p>
+              When they opened Brews & Bonds, the aroma of freshly brewed coffee
+              welcomed locals and visitors alike. The cozy shop, adorned with
+              San Francisco-inspired artwork, became a sanctuary for connection,
+              where people gathered to share stories, build friendships, and
+              experience the warmth of Jacob and Emily's love story through
+              every cup.
+            </p>
+          </div>
+          <div class="image-container">
+            <img src="images/people-resized.jpg" alt="people-resized" />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    window.onload = () => {
+      const toggleNav = document.getElementById("toggle-nav");
+      toggleNav.innerHTML = "&#9776;";
+
+      toggleNav.addEventListener("click", () => {
+        document.body.classList.toggle("nav-open");
+        toggleNav.innerHTML = document.body.classList.contains("nav-open")
+          ? "&#x2715;"
+          : "&#9776;";
+      });
+    };
+  </script>
+</html>

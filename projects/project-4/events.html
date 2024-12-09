@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="icon" type="image/jpg" href="images/coffee-cup-favicon.jpg" />
+    <link rel="stylesheet" href="https://use.typekit.net/xlr4dvo.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <button id="toggle-nav">&#9776;</button>
+  <nav id="primary-nav" role="navigation">
+    <div class="inner">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <body>
+    <div class="page-container">
+      <div class="side-box"></div>
+      <div class="middle-box">
+        <div id="event-header-container">
+          <h1 id="about-header">EVENTS</h1>
+          <p id="event-reminder">
+            Please note that specific event dates and times may vary, and it's
+            always a good idea to check with the coffee shop for the most
+            up-to-date information and any additional events they may offer.
+            <p>Location: 123 Roast Street Harrisburg, PA 17101</p>
+            <p>Phone Number: (717) 555-7283</p>
+          </p></div>
+        <div class="text-container-days">
+          <h1 id="days-of-the-week">Sunday:</h1>
+          <p id="semibold">Book Club Meeting:</p>
+          <p>
+            Discuss the latest book selection with fellow book enthusiasts over
+            a cup of coffee.
+            <p id="semibold">(3:00 PM - 4:30 PM)</p>
+          </p>
+          <p id="semibold">Sunday Brunch:</p>
+          <p>
+            Indulge in a delicious brunch menu accompanied by live acoustic
+            music. 
+            <p id="semibold">(10:00 AM - 2:00 PM)</p>
+          </p>
+        </div>
+        <div class="text-container-days">
+          <h1 id="days-of-the-week">Monday:</h1>
+          <p id="semibold">Morning Yoga Class:</p>
+          <p>
+            Start your week with a relaxing yoga session.
+            <p id="semibold">(8:00 AM - 9:00  AM) </p>
+          </p>
+          <p id="semibold">Live Acoustic Music:</p>
+          <p>
+            Enjoy soulful acoustic performances by local artists.
+            <p id="semibold">(7:00 PM -  9:00 PM)</p>
+          </p>
+        </div>
+        <div class="text-container-days">
+          <h1 id="days-of-the-week">Tuesday:</h1>
+          <p id="semibold">Coffee Tasting Workshop:</p>
+          <p>
+            Learn about different coffee brewing methods and taste  various specialty coffees. 
+            <p id="semibold">(6:00 PM - 7:30 PM)</p>
+          </p>
+          <p id="semibold">Open Mic Night:</p>
+          <p>
+            Showcase your talent or enjoy the performances of local musicians,  poets, and comedians.
+            <p id="semibold">(8:00 PM - 10:00 PM)</p>
+          </p>
+        </div>
+        <div class="text-container-days">
+          <h1 id="days-of-the-week">Wednesday:</h1>
+          <p id="semibold">Art Exhibition:</p>
+          <p>
+            Explore the works of local artists displayed throughout the coffee shop.
+            <p id="semibold">(All day)</p>
+          </p>
+          <p id="semibold">Trivia Night:</p>
+          <p>
+            Test your knowledge and compete with friends in a fun-filled trivia  competition.
+            <p id="semibold">(7:00 PM - 9:00 PM)</p>
+          </p>
+        </div>
+        <div class="text-container-days">
+          <h1 id="days-of-the-week">Thursday:</h1>
+          <p id="semibold">Cooking Class:</p>
+          <p>
+            Join our skilled chef and learn to prepare delicious desserts. Limited spots  available, reservations required.
+            <p id="semibold">(5:00 PM - 7:00 PM)</p>
+          </p>
+          <p id="semibold">Board Game Night:</p>
+          <p>
+            Gather with friends and enjoy a variety of board games while sipping  your favorite drinks.
+            <p id="semibold">(6:00 PM - 9:00 PM)</p>
+          </p>
+        </div>
+        <div class="text-container-days">
+          <h1 id="days-of-the-week">Friday:</h1>
+          <p id="semibold">Live Jazz Band:</p>
+          <p>
+            Relax and unwind with the smooth tunes of a live jazz band.
+            <p id="semibold">(7:30 PM -  9:30 PM)</p>
+          </p>
+        </div>
+        <div class="text-container-days">
+          <h1 id="days-of-the-week">Saturday:</h1>
+          <p id="semibold">Family Day:</p>
+          <p>
+            Bring your kids for a special day of face painting, storytelling, and fun  activities.
+            <p id="semibold">(10:00 AM - 12:00 PM)</p>
+          </p>
+          <p id="semibold">Poetry Slam:</p>
+          <p>
+            Express your creativity or listen to passionate poets share their work during  our poetry slam event.
+            <p id="semibold">(7:00 PM - 9:00 PM)</p>
+          </p>
+        </div>
+      </div>
+      <div class="side-box"></div>
+    </div>
+  </body>
+  <script>
+    window.onload = () => {
+      const toggleNav = document.getElementById("toggle-nav");
+      toggleNav.innerHTML = "&#9776;";
+
+      toggleNav.addEventListener("click", () => {
+        document.body.classList.toggle("nav-open");
+        toggleNav.innerHTML = document.body.classList.contains("nav-open")
+          ? "&#x2715;"
+          : "&#9776;";
+      });
+    };
+  </script>
+</html>
