@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Nexa-Heavy";
+  src: url("fonts/Nexa-Heavy.ttf") format("opentype");
+  font-weight: 300px;
+  font-style: normal;
+}
+
+.navbar,
+.custom-btn,
+.custom-btn-search {
+  font-family: "Nexa-Heavy", sans-serif;
+}
+
+h1 {
+  font-family: "Nexa-Heavy", sans-serif;
+  color: #f4f4f4;
+}
