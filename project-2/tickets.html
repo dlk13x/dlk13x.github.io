@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/lvj2aot.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg" href="icons/favicon-for-p2-white.svg" />
+    <title>Tickets</title>
+  </head>
+  <body class="tickets-page">
+    <div class="main-container">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home.html">
+            <img
+              src="icons/favicon-for-p2-white.svg"
+              alt="NIKOCOMICS Logo"
+              height="40"
+              fill="white"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="home.html"
+                >HOME</a
+              >
+              <a class="nav-link" href="about.html">ABOUT</a>
+              <a class="nav-link" href="event.html">EVENT</a>
+              <a class="nav-link" href="tickets.html">TICKETS</a>
+              <a class="nav-link" href="contact.html">CONTACT</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="content">
+        <!-- Tickets Section -->
+        <div class="tickets-container">
+          <h2 class="tickets-header">Tickets</h2>
+          <div class="ticket-option">
+            <div class="ticket-info">
+              <p>
+                Single-Day Pass - $40 <br />
+                <span class="ticket-description"
+                  >(General entry for one day)</span
+                >
+              </p>
+            </div>
+            <div class="ticket-button">
+              <a href="purchase.html" class="buy-button">Buy Now</a>
+            </div>
+          </div>
+          <hr class="ticket-divider" />
+        </div>
+
+        <div class="tickets-container">
+          <div class="ticket-option">
+            <div class="ticket-info">
+              <p>
+                Weekend Pass - $90 <br />
+                <span class="ticket-description"
+                  >(Full access for three days)</span
+                >
+              </p>
+            </div>
+            <div class="ticket-button">
+              <a href="purchase.html" class="buy-button">Buy Now</a>
+            </div>
+          </div>
+          <hr class="ticket-divider" />
+        </div>
+
+        <div class="tickets-container">
+          <div class="ticket-option">
+            <div class="ticket-info">
+              <p>
+                VIP X-Men Experience - $180 <br />
+                <span class="ticket-description"
+                  >(Includes early access, exclusive merch, & priority seating
+                  at panels)</span
+                >
+              </p>
+            </div>
+            <div class="ticket-button">
+              <a href="purchase.html" class="buy-button">Buy Now</a>
+            </div>
+          </div>
+          <hr class="ticket-divider" />
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>&copy; 2025 - NikoComics, Inc. All rights reserved.</p>
+        <div class="social-media-icons">
+          <a href=""><img src="icons/Instagram_Glyph_White.png" alt="#" /></a>
+          <a href=""><img src="icons/Facebook_Logo_Secondary.png" alt="#" /></a>
+          <a href=""><img src="icons/logo-white.png" alt="#" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navbarToggler = document.querySelector(".navbar-toggler");
+      const navbarCollapse = document.querySelector("#navbarNavAltMarkup");
+
+      navbarToggler.addEventListener("click", function () {
+        navbarCollapse.classList.toggle("show");
+      });
+    });
+  </script>
+</html>
