@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
+    <link rel="icon" type="image/svg" href="images/logo-submark.png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,17 +15,38 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar-1">
-      <div class="logo">
-        <img src="images/submark (FINAL).jpg" alt="Logo" />
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img
+            src="images/logo-submark.png"
+            alt="NIKOCOMICS Logo"
+            height="40"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="home.html"
+              >HOME</a
+            >
+            <a class="nav-link" href="works.html">WORKS</a>
+            <a class="nav-link" href="about-me.html">ABOUT ME</a>
+            <a class="nav-link" href="resume.html">RESUME</a>
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </div>
+        </div>
       </div>
-      <ul class="nav-links-1">
-        <li><a href="home.html">HOME</a></li>
-        <li><a href="works.html">WORKS</a></li>
-        <li><a href="about-me.html">ABOUT ME</a></li>
-        <li><a href="resume.html">RESUME</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
     </nav>
     <div class="about-container">
       <img

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rogue Link</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/lvj2aot.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img
+            src="images/logo-submark.png"
+            alt="NIKOCOMICS Logo"
+            height="40"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="home.html"
+              >HOME</a
+            >
+            <a class="nav-link" href="works.html">WORKS</a>
+            <a class="nav-link" href="about-me.html">ABOUT ME</a>
+            <a class="nav-link" href="resume.html">RESUME</a>
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="project-detail">
+      <div class="project-image-wrapper">
+        <!-- Left button for previous image -->
+        <button class="slide-btn prev">&#10094;</button>
+
+        <!-- Image container -->
+        <div class="project-image-container">
+          <img
+            src="images/rouge-link.jpg"
+            alt="Project Image"
+            id="zoomable-img"
+          />
+        </div>
+
+        <!-- Right button for next image -->
+        <button class="slide-btn next">&#10095;</button>
+      </div>
+
+      <div class="project-info">
+        <h1>Rogue Link</h1>
+        <p>
+          Rogue Link was a small skateboarding company made for a student as a
+          class project.
+        </p>
+      </div>
+    </div>
+
+    <!-- Zoom Modal -->
+    <div id="zoom-modal">
+      <span class="close-btn">&times;</span>
+      <img id="zoom-img" src="images/project1.jpg" alt="Zoomed Image" />
+    </div>
+  </body>
+  <script>
+    const zoomableImg = document.getElementById("zoomable-img");
+    const zoomModal = document.getElementById("zoom-modal");
+    const zoomImg = document.getElementById("zoom-img");
+    const closeBtn = document.querySelector(".close-btn");
+
+    zoomableImg.addEventListener("click", () => {
+      zoomModal.style.display = "flex";
+      zoomImg.src = zoomableImg.src;
+    });
+
+    closeBtn.addEventListener("click", () => {
+      zoomModal.style.display = "none";
+    });
+
+    // Optional: Close modal by clicking outside the image
+    zoomModal.addEventListener("click", (e) => {
+      if (e.target === zoomModal) {
+        zoomModal.style.display = "none";
+      }
+    });
+  </script>
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+  <script>
+    const projectImages = [
+      "images/rouge-link.jpg",
+      "images/project2.jpg",
+      "images/project3.jpg",
+    ];
+    let currentImageIndex = 0;
+
+    const zoomableImage = document.getElementById("zoomable-img");
+    const prevBtn = document.querySelector(".slide-btn.prev");
+    const nextBtn = document.querySelector(".slide-btn.next");
+
+    function updateImage() {
+      // Slide the current image out to the left
+      zoomableImage.style.transform = "translateX(-100%)";
+
+      // Wait for the sliding to complete before updating the image
+      setTimeout(() => {
+        zoomableImage.src = projectImages[currentImageIndex]; // Update to the next image
+        zoomableImage.style.transform = "translateX(100%)"; // Slide the new image in
+        setTimeout(() => {
+          zoomableImage.style.transform = "translateX(0)"; // Reset to normal position
+        }, 200); // Transition time for the slide-in effect
+      }, 300); // Wait for the current image to slide out
+    }
+
+    prevBtn.addEventListener("click", () => {
+      currentImageIndex =
+        (currentImageIndex - 1 + projectImages.length) % projectImages.length;
+      updateImage();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentImageIndex = (currentImageIndex + 1) % projectImages.length;
+      updateImage();
+    });
+  </script>
+</html>
