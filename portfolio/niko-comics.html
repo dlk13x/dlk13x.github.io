@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Niko Interactive</title>
+    <link rel="icon" type="image/svg" href="images/logo-submark.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/lvj2aot.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img src="images/logo-submark.png" alt="#" height="40" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="home.html"
+              >HOME</a
+            >
+            <a class="nav-link" href="works.html">WORKS</a>
+            <a class="nav-link" href="about-me.html">ABOUT ME</a>
+            <a class="nav-link" href="resume.html">RESUME</a>
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Project Detail -->
+    <div class="container my-5">
+      <div class="row text-center text-md-start align-items-center">
+        <!-- Desktop Layout -->
+        <div
+          class="col-12 col-md-6 d-none d-md-flex align-items-center justify-content-center gap-3 mb-4 mb-md-0"
+        >
+          <button class="slide-btn prev btn btn-outline-dark">&#10094;</button>
+          <div class="project-image-container">
+            <img
+              src="images/niko-interactive.jpg"
+              alt="Project Image"
+              id="zoomable-img"
+              class="img-fluid transition-img"
+            />
+          </div>
+          <button class="slide-btn next btn btn-outline-dark">&#10095;</button>
+        </div>
+
+        <!-- Mobile Layout -->
+        <div class="col-12 d-block d-md-none text-center mb-4">
+          <div class="project-image-container mb-3">
+            <img
+              src="images/niko-interactive.jpg"
+              alt="Project Image"
+              id="zoomable-img-mobile"
+              class="img-fluid transition-img"
+            />
+          </div>
+          <div class="d-flex justify-content-center gap-3">
+            <button class="slide-btn prev btn btn-outline-dark">
+              &#10094;
+            </button>
+            <button class="slide-btn next btn btn-outline-dark">
+              &#10095;
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Side: Project Description -->
+        <div class="col-12 col-md-6">
+          <div class="project-info">
+            <h1>Niko Interactive</h1>
+            <a href="https://dlk13x.github.io/project-1/home.html" target="_blank" style="color: black; ">Visit Website</a>
+          </div>
+        </div>
+    </div>
+
+    <!-- Zoom Modal -->
+    <div id="zoom-modal">
+      <span class="close-btn">&times;</span>
+      <img id="zoom-img" src="" alt="Zoomed Image" />
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const projectImages = [
+        "images/niko-interactive.jpg",
+        "images/niko-interactive-profile.jpg",
+        "images/niko-interactive-gallery.jpg",
+      ];
+
+      let currentIndex = 0;
+      const imgEls = [
+        document.getElementById("zoomable-img"),
+        document.getElementById("zoomable-img-mobile"),
+      ];
+
+      function updateImage(index) {
+        imgEls.forEach((img) => {
+          if (!img) return;
+          img.style.opacity = "0";
+          setTimeout(() => {
+            img.src = projectImages[index];
+            img.style.transform = "scale(1.05)";
+            img.style.opacity = "1";
+            setTimeout(() => {
+              img.style.transform = "scale(1)";
+            }, 200);
+          }, 300);
+        });
+      }
+
+      document.querySelectorAll(".slide-btn.prev").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          currentIndex =
+            (currentIndex - 1 + projectImages.length) % projectImages.length;
+          updateImage(currentIndex);
+        })
+      );
+
+      document.querySelectorAll(".slide-btn.next").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % projectImages.length;
+          updateImage(currentIndex);
+        })
+      );
+
+      // Zoom modal
+      const zoomModal = document.getElementById("zoom-modal");
+      const zoomImg = document.getElementById("zoom-img");
+      const closeBtn = document.querySelector(".close-btn");
+
+      imgEls.forEach((img) => {
+        if (!img) return;
+        img.addEventListener("click", () => {
+          zoomModal.style.display = "flex";
+          zoomImg.src = img.src;
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        zoomModal.style.display = "none";
+      });
+
+      zoomModal.addEventListener("click", (e) => {
+        if (e.target === zoomModal) {
+          zoomModal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

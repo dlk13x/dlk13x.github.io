@@ -4,24 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rogue Link</title>
+    <link rel="icon" type="image/svg" href="images/logo-submark.png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://use.typekit.net/lvj2aot.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="home.html">
-          <img
-            src="images/logo-submark.png"
-            alt="NIKOCOMICS Logo"
-            height="40"
-          />
+          <img src="images/logo-submark.png" alt="#" height="40" />
         </a>
         <button
           class="navbar-toggler"
@@ -48,104 +44,126 @@
       </div>
     </nav>
 
-    <div class="project-detail">
-      <div class="project-image-wrapper">
-        <!-- Left button for previous image -->
-        <button class="slide-btn prev">&#10094;</button>
-
-        <!-- Image container -->
-        <div class="project-image-container">
-          <img
-            src="images/rouge-link.jpg"
-            alt="Project Image"
-            id="zoomable-img"
-          />
+    <!-- Project Detail -->
+    <div class="container my-5">
+      <div class="row text-center text-md-start align-items-center">
+        <!-- Desktop Layout -->
+        <div
+          class="col-12 col-md-6 d-none d-md-flex align-items-center justify-content-center gap-3 mb-4 mb-md-0"
+        >
+          <button class="slide-btn prev btn btn-outline-dark">&#10094;</button>
+          <div class="project-image-container">
+            <img
+              src="images/rouge-link.jpg"
+              alt="Project Image"
+              id="zoomable-img"
+              class="img-fluid transition-img"
+            />
+          </div>
+          <button class="slide-btn next btn btn-outline-dark">&#10095;</button>
         </div>
 
-        <!-- Right button for next image -->
-        <button class="slide-btn next">&#10095;</button>
-      </div>
+        <!-- Mobile Layout -->
+        <div class="col-12 d-block d-md-none text-center mb-4">
+          <div class="project-image-container mb-3">
+            <img
+              src="images/rouge-link.jpg"
+              alt="Project Image"
+              id="zoomable-img-mobile"
+              class="img-fluid transition-img"
+            />
+          </div>
+          <div class="d-flex justify-content-center gap-3">
+            <button class="slide-btn prev btn btn-outline-dark">
+              &#10094;
+            </button>
+            <button class="slide-btn next btn btn-outline-dark">
+              &#10095;
+            </button>
+          </div>
+        </div>
 
-      <div class="project-info">
-        <h1>Rogue Link</h1>
-        <p>
-          Rogue Link was a small skateboarding company made for a student as a
-          class project.
-        </p>
+        <!-- Right Side: Project Description -->
+        <div class="col-12 col-md-6">
+          <div class="project-info">
+            <h1>Rogue Link</h1>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Zoom Modal -->
     <div id="zoom-modal">
       <span class="close-btn">&times;</span>
-      <img id="zoom-img" src="images/project1.jpg" alt="Zoomed Image" />
+      <img id="zoom-img" src="" alt="Zoomed Image" />
     </div>
-  </body>
-  <script>
-    const zoomableImg = document.getElementById("zoomable-img");
-    const zoomModal = document.getElementById("zoom-modal");
-    const zoomImg = document.getElementById("zoom-img");
-    const closeBtn = document.querySelector(".close-btn");
 
-    zoomableImg.addEventListener("click", () => {
-      zoomModal.style.display = "flex";
-      zoomImg.src = zoomableImg.src;
-    });
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const projectImages = [
+        "images/rouge-link.jpg",
+        "images/roguelink-spread-1-2.jpg",
+      ];
 
-    closeBtn.addEventListener("click", () => {
-      zoomModal.style.display = "none";
-    });
+      let currentIndex = 0;
+      const imgEls = [
+        document.getElementById("zoomable-img"),
+        document.getElementById("zoomable-img-mobile"),
+      ];
 
-    // Optional: Close modal by clicking outside the image
-    zoomModal.addEventListener("click", (e) => {
-      if (e.target === zoomModal) {
-        zoomModal.style.display = "none";
+      function updateImage(index) {
+        imgEls.forEach((img) => {
+          if (!img) return;
+          img.style.opacity = "0";
+          setTimeout(() => {
+            img.src = projectImages[index];
+            img.style.transform = "scale(1.05)";
+            img.style.opacity = "1";
+            setTimeout(() => {
+              img.style.transform = "scale(1)";
+            }, 200);
+          }, 300);
+        });
       }
-    });
-  </script>
-  <script>
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("navLinks");
 
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  </script>
-  <script>
-    const projectImages = [
-      "images/rouge-link.jpg",
-      "images/project2.jpg",
-      "images/project3.jpg",
-    ];
-    let currentImageIndex = 0;
+      document.querySelectorAll(".slide-btn.prev").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          currentIndex =
+            (currentIndex - 1 + projectImages.length) % projectImages.length;
+          updateImage(currentIndex);
+        })
+      );
 
-    const zoomableImage = document.getElementById("zoomable-img");
-    const prevBtn = document.querySelector(".slide-btn.prev");
-    const nextBtn = document.querySelector(".slide-btn.next");
+      document.querySelectorAll(".slide-btn.next").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % projectImages.length;
+          updateImage(currentIndex);
+        })
+      );
 
-    function updateImage() {
-      // Slide the current image out to the left
-      zoomableImage.style.transform = "translateX(-100%)";
+      // Zoom modal
+      const zoomModal = document.getElementById("zoom-modal");
+      const zoomImg = document.getElementById("zoom-img");
+      const closeBtn = document.querySelector(".close-btn");
 
-      // Wait for the sliding to complete before updating the image
-      setTimeout(() => {
-        zoomableImage.src = projectImages[currentImageIndex]; // Update to the next image
-        zoomableImage.style.transform = "translateX(100%)"; // Slide the new image in
-        setTimeout(() => {
-          zoomableImage.style.transform = "translateX(0)"; // Reset to normal position
-        }, 200); // Transition time for the slide-in effect
-      }, 300); // Wait for the current image to slide out
-    }
+      imgEls.forEach((img) => {
+        if (!img) return;
+        img.addEventListener("click", () => {
+          zoomModal.style.display = "flex";
+          zoomImg.src = img.src;
+        });
+      });
 
-    prevBtn.addEventListener("click", () => {
-      currentImageIndex =
-        (currentImageIndex - 1 + projectImages.length) % projectImages.length;
-      updateImage();
-    });
+      closeBtn.addEventListener("click", () => {
+        zoomModal.style.display = "none";
+      });
 
-    nextBtn.addEventListener("click", () => {
-      currentImageIndex = (currentImageIndex + 1) % projectImages.length;
-      updateImage();
-    });
-  </script>
+      zoomModal.addEventListener("click", (e) => {
+        if (e.target === zoomModal) {
+          zoomModal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
 </html>

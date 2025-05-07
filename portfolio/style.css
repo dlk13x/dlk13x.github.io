@@ -12,6 +12,7 @@ body {
 h1 {
   font-family: "inter-variable", sans-serif;
   font-variation-settings: "slnt" 0, "wght" 400;
+  text-align: center;
 }
 
 .navbar {
@@ -44,11 +45,11 @@ h1 {
 
   .navbar-nav {
     width: 100%;
-    justify-content: space-between; /* Space between logo and nav links */
+    justify-content: space-between;
   }
 
   .navbar-toggler {
-    margin-left: auto; /* Pushes the toggle button to the far right */
+    margin-left: auto;
   }
 
   .navbar-toggler-icon {
@@ -72,12 +73,11 @@ h1 {
   }
 
   .navbar-nav .nav-link {
-    margin-right: 0; /* Removes margin between links on smaller screens */
-    padding: 10px; /* Adds padding to nav links for touch screens */
+    margin-right: 0;
+    padding: 10px;
   }
 }
 
-/* Hamburger (hidden on desktop) */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -88,7 +88,7 @@ h1 {
 /* === MOBILE STYLES === */
 @media (max-width: 768px) {
   .navbar-content {
-    justify-content: space-between; /* Space between logo and hamburger */
+    justify-content: space-between;
     padding: 0 20px;
     display: flex;
   }
@@ -99,7 +99,7 @@ h1 {
     font-size: 28px;
     color: black;
     cursor: pointer;
-    margin-left: auto; /* Push hamburger to the right */
+    margin-left: auto;
   }
 
   .nav-links-1 {
@@ -129,7 +129,6 @@ h1 {
     color: red;
   }
 
-  /* HOMEPAGE RESPONSIVE STACKING */
   .homepage-content {
     flex-direction: column !important;
     align-items: center;
@@ -162,7 +161,6 @@ h1 {
   }
 }
 
-/* === OTHER STYLES === */
 .carousel-inner {
   width: 100%;
 }
@@ -248,6 +246,9 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
+.button-wrapper {
+  margin: 0 auto;
+}
 
 button:hover {
   background-color: #444;
@@ -309,8 +310,8 @@ button:hover {
 
 .portfolio-item img {
   width: 100%;
-  height: 500px; /* or another consistent height */
-  object-fit: cover; /* Crops and centers the image to fill the box */
+  height: 500px;
+  object-fit: cover;
   display: block;
 }
 
@@ -341,7 +342,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 0, 0, 0.4); /* translucent red */
+  background-color: rgba(255, 0, 0, 0.4);
   opacity: 0;
   transition: opacity 0.3s ease;
   display: flex;
@@ -388,19 +389,137 @@ button:hover {
   color: white;
   cursor: pointer;
 }
-/* Add this at the end of your existing CSS file */
+
 .navbar .container-fluid {
   display: flex;
-  justify-content: space-between; /* Ensures space between logo and toggle */
-  align-items: center; /* Vertically aligns the items */
+  justify-content: space-between;
+  align-items: center;
   gap: 20px;
 }
 
 .navbar-toggler {
-  margin-left: auto; /* Pushes the toggle button to the right */
+  margin-left: auto;
 }
 
 .navbar-nav {
   display: flex;
   gap: 30px;
+}
+
+body {
+  font-family: "proxima-nova", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.project-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.project-image-container {
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.transition-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.slide-btn {
+  font-size: 2rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.project-info {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+#zoom-modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+#zoom-modal img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#zoom-modal .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .project-detail {
+    flex-direction: column;
+  }
+
+  .slide-btn {
+    font-size: 1.5rem;
+    padding: 8px 16px;
+  }
+}
+#zoom-modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+#zoom-modal img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+.project-image-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.project-info a {
+  color: black;
+  text-decoration: none;
+}
+.project-info a:hover {
+  text-decoration: underline;
 }
